@@ -1,0 +1,21 @@
+{
+  "name": "base-resume",
+  "version": "0.0.0",
+  "server": false,
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf ./public/dist",
+    "build": "npm run clean && NODE_ENV=production gulp prod"
+  },
+  "dependencies": {
+    "moment": "^2.20.1",
+    "nodemon": "latest",
+    "turbo360": "latest",
+    "vertex360": "^0.1.1"
+  },
+  "app": "5a6cf9bf4ff0000014336481",
+  "deploy": [
+    "."
+  ],
+  "format": "vertex"
+}

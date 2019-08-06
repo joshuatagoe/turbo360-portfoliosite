@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+
+	<style type="text/css">
+		.grey-box {
+			background:#f9f9f9;
+			border:1px solid #ddd;
+			border-radius:3px;
+			padding:12px;
+			margin-bottom:24px
+		}
+
+		.grey-box h3 {
+			margin-top: 0px
+		}
+
+		.grey-box form {
+			width: 50%;
+			margin: auto
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Performer Template</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="/admin/tour">Tour</a></li>
+					<li><a href="/admin/news">News</a></li>
+					<li><a href="/admin/store">Store</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3" style="text-align:center;margin-bottom:48px">
+			<h1>Dashboard Page</h1>
+			<hr />
+			<div class="grey-box">
+				<h3>Purpose</h3>
+				<hr />
+				<p>
+					This is the main user admin console page. Only logged-in users should be able to access this page and the general user-updating functionity should be placed here: change password, username, upload image, etc.
+				</p>
+				<p>
+					Also, app-specific management should happen here as well. For example, if the app allows user to send messages, those messages should show up on this page.
+				</p>
+			</div>
+
+			<div class="grey-box">
+				<h3>Current User</h3>
+				<hr />
+				<p>Update current user details below:</p>
+
+				<form action="/auth/update" method="POST">
+					<input class="form-control" value="{{user.email}}" type="text" name="email" placeholder="Email" /><br />
+					<input class="form-control" value="{{user.username}}" type="text" name="username" placeholder="Username" /><br />
+					<input class="form-control" value="{{user.password}}" type="password" name="password" placeholder="Password" /><br />
+					<input class="form-control" type="hidden" name="id" value="{{user.id}}" />
+					<button type="submit" class="btn btn-info">Update Profile</button>
+				</form>
+			</div>
+
+			<div class="grey-box">
+				<h3>Log Out</h3>
+				<hr />
+				<p>Click the link below to log out. After successfully logging out, app redirects to landing.mustache page.<br /><br /><a class="btn btn-danger" href="/auth/logout">Log Out</a></p>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Turbo library imports: jQuery, Turbo CDN -->
+	<script type="text/javascript" src="https://cdn.turbo360-dev.com/dist/jquery.js"></script>
+	<script type="text/javascript" src="https://cdn.turbo360-dev.com/dist/dropzone.js"></script> 
+	<script type="text/javascript" src="https://cdn.turbo360-dev.com/dist/turbo.min.js"></script>
+
+</body>
+</html>

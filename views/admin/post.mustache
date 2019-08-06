@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+
+	<style type="text/css">
+		.grey-box {
+			background:#f9f9f9;
+			border:1px solid #ddd;
+			border-radius:3px;
+			padding:12px;
+			margin-bottom:24px
+		}
+
+		.grey-box h3 {
+			margin-top: 0px
+		}
+
+		.grey-box form {
+			width: 50%;
+			margin: auto
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Performer Template</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="/admin/tour">Tour</a></li>
+					<li><a href="/admin/news">News</a></li>
+					<li><a href="/admin/store">Store</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3" style="text-align:center;margin-bottom:48px">
+			<h1>Post Page</h1>
+			<hr />
+			<div class="grey-box">
+				<h3>Purpose</h3>
+				<hr />
+				<p>This page shows individual blog posts specified by slug.</p>
+			</div>
+
+			<div class="grey-box">
+				<h3>{{post.title}}</h3>
+				<hr />
+				<p>{{post.text}}</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Turbo library imports: jQuery, Turbo CDN -->
+	<script type="text/javascript" src="https://cdn.turbo360-dev.com/dist/jquery.js"></script>
+	<script type="text/javascript" src="https://cdn.turbo360-dev.com/dist/dropzone.js"></script> 
+	<script type="text/javascript" src="https://cdn.turbo360-dev.com/dist/turbo.min.js"></script>
+
+</body>
+</html>

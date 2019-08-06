@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <title>Flex - Personal Resume / Blog / Portfolio Template</title>
+        <meta name="description" content="Flex - Personal Resume / Blog / Portfolio Template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- General CSS Settings -->
+        <link rel="stylesheet" href="css/general_style.css">
+        <!-- Main Style of the template -->
+        <link rel="stylesheet" href="css/main_style.css">
+        <!-- Landing Page Style -->
+        <link rel="stylesheet" href="css/reset_style.css">
+        <!-- Awesomefont -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Fav Icon -->
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    <body>
+
+        <!-- Wrapper -->
+        <div class="lx-wrapper">
+            <!-- Loader -->
+            <div class="lx-loader">
+                <div>
+                    <h1>FLEX v1.0</h1>
+                    <img src="images/oval.svg" alt="Loading" />
+                    <p>Powered By LinxTheme</p>
+                </div>
+            </div>
+            <!-- Header -->
+            {{>sidebar}}
+            <!-- Main -->
+            <div class="lx-main">
+                <div class="lx-main-content">
+                    <div class="lx-g1-f">
+                        <!-- Body Menu -->
+                        <div class="lx-body-menu">
+                            <a href="javascript:;">MENU</a>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="lx-has-children"><a href="javascript:;">Resume</a>
+                                    <div class="lx-body-submenu">
+                                        <ul>
+                                            <li><a href="index1.html">Resume 1</a></li>
+                                            <li><a href="index2.html">Resume 2</a></li>
+                                            <li><a href="index3.html">Resume 3</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lx-has-children"><a href="javascript:;">Blog</a>
+                                    <div class="lx-body-submenu">
+                                        <ul>
+                                            <li><a href="blog1.html">Grid + Sidebar</a></li>
+                                            <li><a href="blog2.html">Grid</a></li>
+                                            <li><a href="blog6.html">Masonary</a></li>
+                                            <li><a href="blog3.html">Fullwidth + Grid + Sidebar</a></li>
+                                            <li><a href="blog4.html">Fullwidth + Sidebar</a></li>
+                                            <li><a href="blog5.html">Picture on the left + Sidebar</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lx-has-children"><a href="javascript:;">Single Post</a>
+                                    <div class="lx-body-submenu">
+                                        <ul>
+                                            <li><a href="single-post1.html">Thumbnail</a></li>
+                                            <li><a href="single-post2.html">Video</a></li>
+                                            <li><a href="single-post3.html">Gallery</a></li>
+                                            <li><a href="single-post4.html">No Thumbnail</a></li>
+                                            <li><a href="single-post5.html">No Sidebar</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lx-has-children"><a href="javascript:;" class="active">Portfolio</a>
+                                    <div class="lx-body-submenu">
+                                        <ul>
+                                            <li><a href="portfolio1.html">Grid</a></li>
+                                            <li><a href="portfolio2.html">Masonary</a></li>
+                                            <li><a href="portfolio3.html">Slider</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="about.html">About me</a></li>
+                                <li><a href="contact.html">Contact me</a></li>
+                                <li><a href="404.html">404</a></li>
+                            </ul>
+                            <div class="lx-clear-fix"></div>
+                        </div>
+                        <div class="lx-clear-fix"></div>
+                    </div>
+                    <div class="lx-clear-fix"></div>
+                    <div class="lx-g1-f">
+                        <!-- Blog -->
+                        <div class="lx-portfolio">
+                            <div class="lx-blog-title">
+                                <h3>Portfolio</h3>
+                            </div>
+                            {{#projects}}
+                            <div class="lx-g3-f lx-pr-20">
+                                <!-- Portfolio Item -->
+                                <div class="lx-portfolio-item">
+                                    <div class="lx-portfolio-item-img">
+                                        <a href="#"><img src="{{image}}" alt="{{title}} image" /></a>
+                                        <span>{{Description}}</span>
+                                        <ins>{{Title}}</ins>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/projects}}
+                            <div class="lx-clear-fix"></div>
+                            <div class="lx-g1-f">
+                                <!-- Blog Pagination Desktop -->
+                                <div class="lx-blog-pagination-desktop">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-caret-left"></i><i class="fa fa-caret-left"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-caret-left"></i></a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#" class="active">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i></a></li>
+                                    </ul>
+                                    <div class="lx-clear-fix"></div>
+                                </div>
+                                <!-- Blog Pagination Mobile -->
+                                <div class="lx-blog-pagination-mobile">
+                                    <a href="javascript:;"><i class="fa fa-refresh"></i>&nbsp;SHOW MORE ...</a>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="lx-clear-fix"></div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="lx-footer">
+                <div class="lx-footer-content">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About me</a></li>
+                        <li><a href="contact.html">Contact me</a></li>
+                    </ul>
+                    <p>&copy; 2010-2017 All Rights Reserved</p>
+                    <div class="lx-clear-fix"></div>
+                </div>
+            </div>
+            <!-- Popup -->
+            <div class="lx-popup">
+                <div class="lx-popup-inside">
+                    <a href="javascript:;"><i class="material-icons lx-remove">close</i></a>
+                    <a href="javascript:;"><i class="material-icons lx-angle-left">keyboard_arrow_left</i></a>
+                    <a href="javascript:;"><i class="material-icons lx-angle-right">keyboard_arrow_right</i></a>
+                    <div class="lx-popup-content">
+                        <div class="lx-popup-image">
+                            <img src="#" alt="image title here" />
+                        </div>
+                        <div class="lx-popup-details">
+                            <ul>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JQuery -->
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <!-- Popup Script -->
+        <script src="js/jquery.popup.js"></script>  
+        <!-- Main Script -->
+        <script src="js/script.js"></script>        
+    </body>
+</html>

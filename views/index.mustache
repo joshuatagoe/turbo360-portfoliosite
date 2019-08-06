@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	{{>head}}
+
+  <body>
+    {{>loader}}
+    <div id="page" class="page">
+        <!-- Wrapper -->
+      <div class="lx-wrapper">
+        <!-- Loader -->
+        <div class="lx-loader">
+          <div>
+            <h1>{{env.FULL_NAME}} Resume</h1>
+            <img src="{{env.TURBO_CDN}}/images/oval.svg" alt="{{env.FULL_NAME}} Resume" />
+          </div>
+        </div>
+        <!-- Header -->
+
+        {{>sidebar}}
+        <!-- Main -->
+        <div class="lx-main">
+          <div class="lx-main-content">
+            <div style="height:64px"></div> <!-- This is where >nav used to be -->
+
+            <div class="lx-clear-fix"></div>
+            <div class="lx-g3-f lx-pr-30">
+              <div class="lx-resume">
+                <div class="lx-resume-img">
+                  <img src="{{env.PROFILE_ICON}}" alt="{{env.FULL_NAME}} Resume" />
+                </div>
+                <div class="lx-resume-name">
+                  <h1>{{env.FULL_NAME}}</h1>
+
+                  {{#page.birthdate}}
+                  <p>Born on {{page.birthdate}}</p>
+                  {{/page.birthdate}}
+
+                  <p>{{page.general-info-header}}</p>
+                  <ul>
+                    {{#env.FACEBOOK}}
+                    <li><a target="_blank" href="{{env.FACEBOOK}}"><i class="fa fa-facebook"></i></a></li>
+                    {{/env.FACEBOOK}}
+
+                    {{#env.LINKEDIN}}
+                    <li><a target="_blank" href="{{env.LINKEDIN}}"><i class="fa fa-linkedin"></i></a></li>
+                    {{/env.LINKEDIN}}
+
+                    {{#env.TWITTER}}
+                    <li><a target="_blank" href="{{env.TWITTER}}"><i class="fa fa-twitter"></i></a></li>
+                    {{/env.TWITTER}}
+
+                    {{#env.GITHUB}}
+                    <li><a target="_blank" href="{{env.GITHUB}}"><i class="fa fa-github"></i></a></li>
+                    {{/env.GITHUB}}
+
+                    {{#env.YOUTUBE}}
+                    <li><a target="_blank" href="{{env.YOUTUBE}}"><i class="fa fa-youtube"></i></a></li>
+                    {{/env.YOUTUBE}}
+                  </ul>
+                  <div class="lx-clear-fix"></div>
+                </div>
+                <div class="lx-resume-bloc">
+                  <h3>Contact</h3>
+                  <div class="lx-resume-info">
+                    {{#env.EMAIL}}
+                    <p><i class="material-icons">email</i> <a href="mailto:{{env.EMAIL}}">{{env.EMAIL}}</a></p>
+                    {{/env.EMAIL}}
+
+                    {{#env.PHONE}}
+                    <p><i class="material-icons">smartphone</i> {{env.PHONE}}</p>
+                    {{/env.PHONE}}
+
+                    {{#env.LOCATION}}
+                    <p><i class="material-icons">place</i> {{env.LOCATION}}</p>
+                    {{/env.LOCATION}}
+                  </div>
+                </div>
+                <div class="lx-resume-bloc">
+                  <h3>Skills</h3>
+                  <div class="lx-resume-language">
+                    {{#skills}}
+                    <p>{{name}}
+                      {{#level}}
+                      <ins class="{{.}}"></ins>
+                      {{/level}}
+                    </p>
+                    {{/skills}}
+                  </div>
+                </div>
+
+                <div class="lx-resume-bloc">
+                  <h3>Activities</h3>
+                  <div class="lx-resume-skills">
+                    {{#page.activities}}
+                    <span>{{.}}</span>
+                    {{/page.activities}}
+                  </div>
+                </div>
+
+                {{#env.RESUME}}
+                <div class="lx-resume-bloc">
+                  <a target="_blank" href="{{env.RESUME}}" class="btn btn-info" style="width:100%">Download PDF Resume</a>
+                </div>
+                {{/env.RESUME}}
+
+              </div>
+            </div>
+            <div class="lx-g3-2-f lx-pl-30 lx-bl">
+              <div class="lx-resume">
+                <div class="lx-resume-bloc lx-mt-0-50">
+                  <h3>About me</h3>
+                  <div class="lx-resume-about">
+                    <p>{{page.general-info-body}}</p>
+                  </div>
+                </div>
+
+                <div class="lx-resume-bloc">
+                  <h3>Education</h3>
+                  <div class="lx-resume-experience">
+                    <ul>
+                      {{#schools}}
+                      <li>
+                        <h4>{{detail}}<br class="hidden-lg" /><ins>{{name}}</ins></h4>
+                        <span>{{timeframe}}</span>
+                        <p>{{description}}</p>
+                      </li>
+                      {{/schools}}
+                    </ul> 
+                  </div>
+                </div>
+
+                <div class="lx-resume-bloc">
+                  <h3>Experience</h3>
+                  <div class="lx-resume-experience">
+                    <ul>
+                      {{#jobs}}
+                      <li>
+                        <h2>{{position}}</h2>
+                        <h4>{{timeframe}}<br class="hidden-lg" /><ins style="color:blue;text-transform:none;margin-right:2px"><em>{{company}}</em></ins></h4>
+                        <p>{{description}}</p>
+                      </li>  
+                      {{/jobs}}        
+                    </ul> 
+                  </div>
+                </div>
+
+                <div class="lx-resume-bloc">
+                  <h3>Projects</h3>
+                  <div class="lx-single-post-comment-list">
+
+                    {{#projects}}
+                    <div class="lx-single-post-comment-item" style="margin-bottom:48px">
+                      <div class="lx-single-post-comment-img">
+                        <img src="{{image}}=s100-c" alt="{{env.FULL_NAME}}">
+                      </div>
+                      <a style="text-decoration:none" target="_blank" href="{{link}}">{{name}}</a>
+                      <span>{{date}}</span>
+                      <div class="lx-single-post-comment-content">
+                        <p>{{description}}</p>
+                      </div>
+                      <div class="lx-clear-fix"></div>
+                    </div>
+                    {{/projects}}
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="lx-clear-fix"></div>
+          </div>
+        </div>
+
+        {{>footer}}
+      </div>
+
+    </div>
+
+    <script src="{{env.TURBO_CDN}}/dist/js/vendor.min.js"></script>
+    <script type="text/javascript">window.__SEED__ = {{{seed}}}</script>
+    <script type="text/javascript">
+      (function(){
+        SocialShareKit.init()
+      })()
+    </script>
+  </body>
+</html>
